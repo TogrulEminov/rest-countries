@@ -1,0 +1,61 @@
+@import '../../css-config/mixins.scss';
+.main-header {
+  background: var(--) white;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 99;
+  position: fixed;
+  box-shadow: 0 0 10px #000;
+  height: 50px;
+  top: 0;
+  width: 100%;
+  @include xs {
+    height: 80px;
+  }
+  &.sticky-header {
+    transform: translateY(-80px);
+    animation: stickyHeader 0.3s ease forwards;
+  }
+  .row {
+    justify-content: space-between;
+    @include xs {
+      gap: 20px;
+    }
+    article {
+      @include flex();
+      justify-content: flex-start;
+      @include xs {
+        justify-content: center;
+      }
+      a {
+        font-size: 18px;
+        color: var(--darkmodeelements);
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+    .lightDark {
+      @include flex();
+      justify-content: flex-end;
+      @include xs {
+        justify-content: center;
+      }
+      button {
+        background: transparent;
+        font-size: 16px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
