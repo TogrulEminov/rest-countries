@@ -1,3 +1,4 @@
+import Filter from '../Components/Filter/Filter';
 import Search from '../Components/Search/Search';
 
 const Home = () => {
@@ -9,7 +10,9 @@ const Home = () => {
             <div className="col-12 col-lg-6 col-md-6 col-sm-6">
               <Search />
             </div>
-            <div className="col-12 col-lg-6 col-md-6 col-sm-6"></div>
+            <div className="col-12 col-lg-6 col-md-6 col-sm-6">
+              <Filter/>
+            </div>
           </div>
         </div>
       </div>
