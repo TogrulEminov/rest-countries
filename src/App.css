@@ -5,10 +5,12 @@
     --lightmodetext: hsl(200, 15%, 8%);
     --lightmodeinput: hsl(0, 0%, 97%);
     --lightModeBtn: #dddddd91;
+    --lightModespan: #666;
     --lightmodebackground: hsl(0, 0%, 98%);
     --darkmodetextlightmodeelements: hsl(0, 0%, 100%);
   }
   
   .row{
     flex-basis: 100%;
+    row-gap: 20px;
   }

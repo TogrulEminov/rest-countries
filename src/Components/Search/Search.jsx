@@ -1,15 +1,15 @@
-import { useContext } from 'react';
+import { useContext} from 'react';
 import './Search.scss';
 import { mainContext } from '../../utils/Context';
 const Search = () => {
-  const { query, handleSearch } = useContext(mainContext);
+  const { query, setQuery } = useContext(mainContext);
   return (
     <div className="searchingData">
       <input
         type="text"
         placeholder="Search country here..."
         value={query}
-        onChange={handleSearch}
+        onChange={(e) => setQuery(e.target.value)}
       />
       <button>Search</button>
     </div>
