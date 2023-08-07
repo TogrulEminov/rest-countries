@@ -5,7 +5,7 @@ import Search from '../Components/Search/Search';
 import { mainContext } from '../utils/Context';
 
 const Home = () => {
-  const { data, quantity, loadMore } = useContext(mainContext);
+  const { data, quantity,  setQuantity,loading } = useContext(mainContext);
   return (
     <main className="main-section">
       <div className="home-head">
@@ -31,9 +31,13 @@ const Home = () => {
                 );
               })}
             </div>
+            {quantity < data.length && (
               <div className="loadMoreBtn">
-                <button onClick={loadMore}>Load More</button>
+                <button onClick={() => setQuantity((e) => e + 50)}>
+               {loading ? "Loading" :"Load More"}
+                </button>
               </div>
+            )}
           </div>
         </div>
       </div>

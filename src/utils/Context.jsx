@@ -9,15 +9,12 @@ function Context({ children }) {
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
   const [quantity, setQuantity] = useState(50);
-  const loadMore = () => {
-    setQuantity((data) => data + 50);
-  };
-
   const getData = async () => {
     try {
       setLoading(true);
       const res = await axios.get(`${BASE_URL}/all`);
-      setData(res.data);
+      setData((pre) => [...pre, ...res.data]);
+      setQuantity(quantity);
     } catch (error) {
       console.error('Error fetching data:', error);
     } finally {
@@ -51,7 +48,7 @@ function Context({ children }) {
     query,
     setQuery,
     quantity,
-    loadMore,
+    setQuantity,
   };
 
   return <mainContext.Provider value={Values}>{children}</mainContext.Provider>;
