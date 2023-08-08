@@ -2,7 +2,6 @@
 .all-card {
   padding-top: 40px;
   .card {
-    background: var(--lightmodebackground);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     .card-header {
       padding: 0;
@@ -19,17 +18,17 @@
       article {
         h3 {
           font-size: 20px;
-          color: var(--lightmodetext);
           font-weight: bold;
+          height: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
         h4 {
           font-size: 16px;
           @include flex();
           gap: 10px;
-          color: var(--lightmodetext);
-          span {
-            color: var(--lightModespan);
-          }
+         
         }
       }
     }
@@ -43,9 +42,8 @@
       border: 0;
       outline: 0;
       cursor: pointer;
-      background-color: red;
       border-radius: 6px;
-      color: var(--white);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
   }
 }

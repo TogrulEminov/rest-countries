@@ -6,12 +6,11 @@ const Search = () => {
   return (
     <div className="searchingData">
       <input
-        type="text"
+        type="search"
         placeholder="Search country here..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button>Search</button>
     </div>
   );
 };

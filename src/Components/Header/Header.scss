@@ -1,17 +1,13 @@
-@import '../../css-config/mixins.scss';
+@import "../../css-config/mixins.scss";
 .main-header {
-  background: var(--white) ;
   padding: 10px 0;
-  border-bottom: 1px solid #ddd;
   z-index: 99;
   position: fixed;
   box-shadow: 0 0 10px #000;
-  height: 50px;
+  height: 80px;
   top: 0;
+  @include flex();
   width: 100%;
-  @include xs {
-    height: 80px;
-  }
   &.sticky-header {
     transform: translateY(-80px);
     animation: stickyHeader 0.3s ease forwards;
@@ -19,7 +15,7 @@
   .row {
     justify-content: space-between;
     @include xs {
-      gap: 20px;
+      gap: 5px;
     }
     article {
       @include flex();
@@ -29,7 +25,6 @@
       }
       a {
         font-size: 18px;
-        color: var(--darkmodeelements);
         @include xs {
           font-size: 14px;
         }
@@ -43,8 +38,9 @@
       }
       button {
         background: transparent;
-        font-size: 16px;
+        font-size: 20px;
         border: 0;
+        text-transform: capitalize;
         outline: 0;
         cursor: pointer;
       }

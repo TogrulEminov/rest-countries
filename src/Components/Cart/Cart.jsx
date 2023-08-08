@@ -1,8 +1,9 @@
 import './Cart.scss';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 const Cart = ({ item }) => {
   return (
-    <div className="card">
+    <Link to="" className="card">
       <div className="card-header">
         <figure>
           <img src={item?.flags.png} alt={item?.flags?.alt} />
@@ -22,7 +23,7 @@ const Cart = ({ item }) => {
           </h4>
         </article>
       </div>
-    </div>
+    </Link>
   );
 };
 
