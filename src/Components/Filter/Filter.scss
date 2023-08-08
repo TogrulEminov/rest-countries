@@ -3,7 +3,7 @@
   @include flex();
   justify-content: flex-end;
   position: relative;
-  @include xs{
+  @include xs {
     justify-content: center;
     width: 100%;
   }
@@ -17,9 +17,10 @@
     display: block;
     @include flex();
     justify-content: space-between;
-    color: var(--lightmodetext);
-    background-color: var(--lightmodeinput);
-    @include xs{
+    color: var(--text);
+    background: var(--ModeElement);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @include xs {
       width: 100%;
     }
   }
@@ -28,17 +29,18 @@
     position: absolute;
     width: 200px;
     z-index: 20;
-    background-color: var(--lightmodeinput);
     box-shadow: 0 0 10px #000;
-    border: 1px solid #ddd;
     top: 60px;
     border-radius: 4px;
-    @include xs{
+    @include xs {
       width: 100%;
     }
     li {
+      color: var(--text);
+      background: var(--Modeelements);
       padding: 10px;
-      border: 1px solid #dddddd78;
+      border: 1px solid;
+      border-color: var(--Modeelements);
       cursor: pointer;
     }
   }

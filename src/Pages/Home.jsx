@@ -5,10 +5,10 @@ import Search from '../Components/Search/Search';
 import { mainContext } from '../utils/Context';
 
 const Home = () => {
-  const { data, quantity,  setQuantity,loading } = useContext(mainContext);
+  const { data, quantity,  setQuantity,loading,theme } = useContext(mainContext);
   return (
-    <main className="main-section">
-      <div className="home-head">
+    <main className="main-section" data-theme={theme}>
+      <div className="home-head" >
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6 col-md-6 col-sm-6">

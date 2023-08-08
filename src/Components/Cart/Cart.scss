@@ -3,6 +3,7 @@
   padding-top: 40px;
   .card {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: var(--Modeelements);
     .card-header {
       padding: 0;
       figure {
@@ -23,12 +24,19 @@
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          color: var(--text);
+          span {
+            color: var(--Modespan);
+          }
         }
         h4 {
           font-size: 16px;
           @include flex();
+          color: var(--text);
           gap: 10px;
-         
+          span {
+            color: var(--Modespan);
+          }
         }
       }
     }
@@ -43,6 +51,8 @@
       outline: 0;
       cursor: pointer;
       border-radius: 6px;
+      background: var(--Modeelements);
+      color: var(--text);
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
   }

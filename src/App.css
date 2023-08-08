@@ -1,0 +1,16 @@
+:root {
+    --text: hsl(200, 15%, 8%);
+    --lightmodeinput: hsl(0, 0%, 97%);
+    --lightModeBtn: #dddddd91;
+    --Modespan: #666;
+    --background: hsl(0, 0%, 98%);
+    --Modeelements: hsl(0, 0%, 98%);
+}
+
+[data-theme='dark'] {
+    --text: hsl(0, 0%, 100%);
+    --Modeelements: hsl(209, 23%, 22%);
+    --background: hsl(207, 26%, 17%);
+    --Modespan: #bcb6b6;
+    --darkmodetextlightmodeelements: hsl(0, 0%, 100%);
+}
