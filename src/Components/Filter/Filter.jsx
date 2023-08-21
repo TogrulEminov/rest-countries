@@ -1,18 +1,27 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import './Filter.scss';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { mainContext } from '../../utils/Context';
 const Filter = () => {
-  const { theme } = useContext(mainContext);
-  const [selected, setSelected] = useState('Filter by region');
+  const { theme, getData } = useContext(mainContext);
+  const [selected, setSelected] = useState('all');
   const dropdownOptions = [
     { id: 1, label: 'africa' },
     { id: 2, label: 'america' },
     { id: 3, label: 'asia' },
     { id: 4, label: 'europe' },
-    { id: 5, label: 'ocenia' },
-    { id: 6, label: 'all' },
+    { id: 5, label: 'Oceania' },
   ];
+  const handleSelect = async (selectedLabel) => {
+    console.log('Selected:', selectedLabel);
+    setSelected(selectedLabel);
+    setClick(false);
+    if (selectedLabel === selected) {
+      await getData();
+    } else {
+      await getData(selectedLabel);
+    }
+  };
   const [click, setClick] = useState(false);
   return (
     <div className="filter">
@@ -30,7 +39,7 @@ const Filter = () => {
               data-theme={theme}
               key={item.id}
               onClick={() => {
-                setSelected(item.label), setClick(false);
+                handleSelect(item.label), setClick(false);
               }}>
               {item.label}
             </li>
