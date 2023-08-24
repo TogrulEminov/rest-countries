@@ -1,12 +1,17 @@
-import { useContext } from 'react';
-import './Cart.scss';
-import CountUp from 'react-countup';
-import { Link } from 'react-router-dom';
-import { mainContext } from '../../utils/Context';
+import { useContext } from "react";
+import "./Cart.scss";
+import CountUp from "react-countup";
+import { Link } from "react-router-dom";
+import { mainContext } from "../../utils/Context";
 const Cart = ({ item }) => {
   const { theme } = useContext(mainContext);
   return (
-    <Link to="" className="card" data-theme={theme}>
+    <Link
+      to={`country/${item.cca3.toLowerCase()}`}
+      key={item?.cca3}
+      className="card"
+      data-theme={theme}
+    >
       <div className="card-header">
         <figure>
           <img src={item?.flags.png} alt={item?.flags?.alt} />

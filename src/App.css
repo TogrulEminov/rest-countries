@@ -1,16 +1,20 @@
 :root {
-    --text: hsl(200, 15%, 8%);
-    --lightmodeinput: hsl(0, 0%, 97%);
+    --text: #111517;
+    --lightmodeinput: #f7f7f7;
     --lightModeBtn: #dddddd91;
     --Modespan: #666;
-    --background: hsl(0, 0%, 98%);
-    --Modeelements: hsl(0, 0%, 98%);
+    --background: #fafafa;
+    --Modeelements: #fafafa;
+    --modal-overlay:rgba(229, 229, 229, 0.92);
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 [data-theme='dark'] {
-    --text: hsl(0, 0%, 100%);
-    --Modeelements: hsl(209, 23%, 22%);
-    --background: hsl(207, 26%, 17%);
+    --text: #ffffff;
+    --Modeelements: #2b3945;
+    --background: #202c37;
     --Modespan: #bcb6b6;
-    --darkmodetextlightmodeelements: hsl(0, 0%, 100%);
+    --modal-overlay:rgba(0, 0, 0, 0.92);
+    --darkmodetextlightmodeelements: #ffffff;
+    --box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }

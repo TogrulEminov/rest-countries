@@ -45,7 +45,12 @@
         text-transform: capitalize;
         outline: 0;
         cursor: pointer;
+        @include flex();
+        gap: 10px;
         color: var(--text);
+        svg {
+          color: rgb(9, 116, 9);
+        }
       }
     }
   }

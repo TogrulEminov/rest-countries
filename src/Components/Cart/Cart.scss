@@ -36,6 +36,9 @@
           gap: 10px;
           span {
             color: var(--Modespan);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
           }
         }
       }
