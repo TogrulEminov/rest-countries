@@ -1,4 +1,4 @@
-@import '../../css-config/mixins.scss';
+@import "../../css-config/mixins.scss";
 .searchingData {
   @include flex();
   gap: 10px;
@@ -8,8 +8,8 @@
     height: 40px;
     border-radius: 10px;
     outline: 0;
-    border: 0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
     padding: 10px;
     color: var(--text);
     background: var(--ModeElement);
