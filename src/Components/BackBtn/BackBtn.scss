@@ -69,7 +69,7 @@
       height: 250px;
     }
     @include xs{
-      width: 250px;
+      width: 100%;
     }
     &.active-modal {
       opacity: 1;
