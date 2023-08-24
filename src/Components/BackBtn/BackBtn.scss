@@ -64,7 +64,13 @@
     visibility: hidden;
     overflow: hidden;
     transition: 0.4s;
-
+    @include sm{
+      width: 500px;
+      height: 250px;
+    }
+    @include xs{
+      width: 250px;
+    }
     &.active-modal {
       opacity: 1;
       visibility: visible;
@@ -81,6 +87,12 @@
         text-transform: capitalize;
         font-weight: bold;
         margin: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        @include sm{
+          font-size: 18px;
+        }
       }
       button {
         background: transparent;
@@ -89,6 +101,9 @@
         border: 0;
         outline: 0;
         transition: 0.4s;
+        @include sm{
+          font-size: 18px;
+        }
         &:hover {
           color: red;
         }
@@ -100,6 +115,9 @@
         color: var(--text);
         font-size: 20px;
         line-height: 1.5;
+        @include sm{
+          font-size: 16px;
+        }
       }
       article {
         @include flex();
@@ -116,6 +134,9 @@
           font-size: 20px;
           line-height: 1.5;
           transition: 0.4s;
+          @include sm{
+            font-size: 16px;
+          }
           &:hover {
             color: #a60c0c;
           }

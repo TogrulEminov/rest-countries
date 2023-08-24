@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./BackBtn.scss";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineCloseCircle } from "react-icons/ai";
@@ -8,6 +8,11 @@ const BackBtn = () => {
   const { theme, detail } = useContext(mainContext);
   const navigate = useNavigate();
   const [modal, setModal] = useState(false);
+  useEffect(() => {
+    modal
+      ? document.body.classList.add("no-scroll")
+      : document.body.classList.remove("no-scroll");
+  }, [modal]);
 
   return (
     <div className="back-and-modal">
@@ -48,7 +53,7 @@ const BackBtn = () => {
             }`}
           >
             <div className="modal-header">
-              <h2>{name?.official}</h2>
+              <h2>{name?.common}</h2>
               <button onClick={() => setModal(false)}>
                 {" "}
                 <AiOutlineCloseCircle />
