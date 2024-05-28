@@ -4,7 +4,6 @@ import BackBtn from "../Components/BackBtn/BackBtn";
 import DetailCard from "../Components/DetailCard/DetailCard";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Spinner from "../Spinner/Spinner";
 
 const Detail = () => {
   const { theme, detail, setDetail, setLoading, } =

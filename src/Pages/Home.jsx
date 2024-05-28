@@ -8,6 +8,7 @@ import Spinner from "../Spinner/Spinner";
 const Home = () => {
   const { data, quantity, query, setQuantity, loading, theme } =
     useContext(mainContext);
+
   return (
     <main className="main-section" data-theme={theme}>
       <div className="home-head">
